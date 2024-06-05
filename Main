@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Item> container = new ArrayList<>();
+        Item I1 = new Item(12345,"pencil");
+        Item I2 = new Item(28745,"rubber");
+        Item I3 = new Item(98512,"ruler");
+        Item I4 = new Item(21436,"notebook");
+        Item I5 = new Item(29756,"book");
+        Item I6 = new Item(56789,"apple");
+        Item I7 = new Item(98345,"pear");
+        Item I8 = new Item(34556,"umbrella");
+        Item I9 = new Item(12367,"shoe");
+        Item I10 = new Item(97653,"ball");
+        Item I11 = new Item(90341,"gate");
+        Item I12 = new Item(12578,"phone");
+        Item I13 = new Item(51780,"speakers");
+        Item I14 = new Item(14689,"sneakers");
+        Item I15 = new Item(98203,"booklet");
+        container.add(I1);
+        container.add(I2);
+        container.add(I3);
+        container.add(I4);
+        container.add(I5);
+        container.add(I6);
+        container.add(I7);
+        container.add(I8);
+        container.add(I9);
+        container.add(I10);
+        container.add(I11);
+        container.add(I12);
+        container.add(I13);
+        container.add(I14);
+        container.add(I15);
+
+        List<Item> subList = container.subList(0,5);
+
+
+       Map<Integer, String> containerHM = new HashMap<>();
+        for(Item i : subList){
+            containerHM.put(i.getID(), i.getName());
+        }
+
+        Set<Integer> keySet = containerHM.keySet();
+        Collection<String> values = containerHM.values();
+        for (Map.Entry<Integer,String> entry : containerHM.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+
+
+    }
+}
